@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquakes Dashboard</title>
+
+    <!-- Leaflet css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+    
+
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
+    <!-- Leaflet js -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+      <!-- API Key -->
+    <script type="text/javascript" src="static/js/config.js"></script>
+    <!-- Our JavaScript -->
+    <script type="text/javascript" src="static/js/logic.js"></script>
+
+    <!-- plate data -->
+    <script src="plates.json"></script>
+
+
+</head>
+<body class="backround">
+  <div class="row">
+    <div class="col-md-12">
+        <h2 style="text-align: center;">Live <br> 24hr Earthquake Dashboard</h2> <hr> 
+            <ul>
+              <li>Earthquake data that updates every minute!</li>
+              <li>Click the markers to view the stats!</li>
+              <li>Hit "Tectonic Plates" and compare results!</li>
+            </ul>
+    </div>
+</div>
+  <div id="map-id"></div>
+</body>
+</html>
