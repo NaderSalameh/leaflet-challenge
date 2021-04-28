@@ -1,4 +1,3 @@
-
 // Function to determine marker size based on population
 function markerSize(mag) 
 {
@@ -65,7 +64,7 @@ d3.json("plates.json").then((json) =>
                     
                 }).bindPopup(`  <h2> ${quake.properties.place} </h2> <hr>
                                 <h3> Magnitude: ${quake.properties.mag} </h3>
-                                <h3> Depth: ${quake.geometry.coordinates[2]} km
+                                <h3> Depth: ${quake.geometry.coordinates[2]}km </h3>
                                 <h3> Time: ${dateConversion(quake.properties.time)} </h3>`)
             ) 
         }) 
@@ -149,14 +148,12 @@ d3.json("plates.json").then((json) =>
           legend.onAdd = function() {
             var div = L.DomUtil.create("div", "legend");
         
-            var depth = ['-10 km (BGS) ', '10 km (BGS)', `30 km (BGS)`, `50 km (BGS)`, `70 km (BGS)`, `90 km (BGS)`];
+            var depth = ['-10km - 10km', '10km -30km', `30km - 50km`, `50km - 70km`, `70km - 90km`, `90km +`];
             var depthColor = ["#5BFF33", "#FFC300", "#FF5733", "#C70039", "#900C3F", "#581845"];
         
         
             for (var i = 0; i < depth.length; i++) {
-              div.innerHTML +=
-              "<i style='background: " + depthColor[i] + "'></i> " +
-              depth[i] + (depth[i + 1] ? " &ndash; " + depth[i + 1] + "<br>" : "+");
+              div.innerHTML +="<i style='background:" + depthColor[i] + "'></i>" + depth[i] + "<br>";
             }
             return div;
         
@@ -168,15 +165,3 @@ d3.json("plates.json").then((json) =>
     })
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
